@@ -1,4 +1,5 @@
 from translator import MorseCodeTranslator
+import pyperclip
 
 
 class App(MorseCodeTranslator):
@@ -18,7 +19,10 @@ class App(MorseCodeTranslator):
                 break
 
             # input is translated accordingly
-            print(self.translate(user_input))
+            output = self.translate(user_input)
+            # result is copied to user clipboard and printed
+            pyperclip.copy(output)
+            print(output)
 
 
 # MAIN

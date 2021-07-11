@@ -22,8 +22,7 @@ class MorseCodeTranslator():
     def determine_direction(self, input_text) -> bool:
         """Determines if input should be translated from code to plain text
         or plain text to code."""
-        # matched list evaluates to true if every character in input
-        # is in the CODE_CHAR_SET
+        # each character is evaluated against the CODE_CHAR_SET
         matched_list = [char in self.CODE_CHAR_SET for char in input_text]
         # returns True only if all in matched list are True
         return all(matched_list)

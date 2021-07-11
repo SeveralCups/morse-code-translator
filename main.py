@@ -12,7 +12,7 @@ class App(MorseCodeTranslator):
         print("Welcome to the morse code translator!\nType '!exit' to quit.")
 
         while True:
-            user_input = input("Enter text to translate: ")
+            user_input = input("Enter text or morse code to translate: ")
 
             if user_input == "!exit":
                 break
